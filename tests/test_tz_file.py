@@ -3,20 +3,20 @@
 import os
 import pytest
 
-from pytzdata import tz_file, set_directory
-from pytzdata.exceptions import TimezoneNotFound
+from pytxdata import tz_file, set_directory
+from pytxdata.exceptions import TimezoneNotFound
 
 
 def setup_module(module):
-    if 'PYTZDATA_TZDATADIR' in os.environ:
-        del os.environ['PYTZDATA_TZDATADIR']
+    if 'pytxdata_TZDATADIR' in os.environ:
+        del os.environ['pytxdata_TZDATADIR']
 
     set_directory()
 
 
 def teardown_module(module):
-    if 'PYTZDATA_TZDATADIR' in os.environ:
-        del os.environ['PYTZDATA_TZDATADIR']
+    if 'pytxdata_TZDATADIR' in os.environ:
+        del os.environ['pytxdata_TZDATADIR']
 
     set_directory()
 
@@ -24,7 +24,7 @@ def teardown_module(module):
 def test_tz_file():
     here = os.path.realpath(os.path.dirname(__file__))
     filepath = os.path.realpath(
-        os.path.join(here, '..', 'pytzdata', 'zoneinfo', 'Europe', 'Paris')
+        os.path.join(here, '..', 'pytxdata', 'zoneinfo', 'Europe', 'Paris')
     )
 
     with open(filepath) as f1:

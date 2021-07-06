@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pytzdata"
+name = "pytxdata"
 version = "2020.1"
 description = "The Olson timezone database for Python."
 authors = [
@@ -9,8 +9,8 @@ license = "MIT"
 
 readme = "README.rst"
 
-homepage = "https://github.com/sdispater/pytzdata"
-repository = "https://github.com/sdispater/pytzdata"
+homepage = "https://github.com/sdispater/pytxdata"
+repository = "https://github.com/sdispater/pytxdata"
 
 classifiers = [
     "Operating System :: OS Independent",

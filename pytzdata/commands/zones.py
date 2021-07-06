@@ -2,7 +2,7 @@
 
 import os
 import pprint
-import pytzdata
+import pytxdata
 
 from cleo import Command
 
@@ -20,7 +20,7 @@ timezones = {}
 """
 
     def handle(self):
-        zones = pytzdata.get_timezones()
+        zones = pytxdata.get_timezones()
 
         tz_file = os.path.join(
             os.path.dirname(__file__),

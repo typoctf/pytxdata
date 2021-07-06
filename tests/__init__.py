@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from pytzdata import set_directory
+from pytxdata import set_directory
 
 
 def setup_module(module):

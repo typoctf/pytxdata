@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from pytzdata.version import VERSION, OLSON_VERSION
+from pytxdata.version import VERSION, OLSON_VERSION
 
 EXPECTED_VERSION = "2020.1"
 

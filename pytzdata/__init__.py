@@ -12,7 +12,7 @@ DEFAULT_DIRECTORY = os.path.join(
     'zoneinfo'
 )
 
-_DIRECTORY = os.getenv('PYTZDATA_TZDATADIR', DEFAULT_DIRECTORY)
+_DIRECTORY = os.getenv('pytxdata_TZDATADIR', DEFAULT_DIRECTORY)
 
 _TIMEZONES = {}
 
@@ -80,7 +80,7 @@ def set_directory(directory=None):
     global _DIRECTORY
 
     if directory is None:
-        directory = os.getenv('PYTZDATA_TZDATADIR', DEFAULT_DIRECTORY)
+        directory = os.getenv('pytxdata_TZDATADIR', DEFAULT_DIRECTORY)
 
     _DIRECTORY = directory
 

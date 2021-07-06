@@ -1,4 +1,4 @@
-RELEASE := $$(sed -n -E "s/^VERSION = '(.+)'/\1/p" pytzdata/version.py)
+RELEASE := $$(sed -n -E "s/^VERSION = '(.+)'/\1/p" pytxdata/version.py)
 
 list:
 	@sh -c "$(MAKE) -p no_targets__ | \
@@ -24,10 +24,10 @@ tox:
 
 # Build tzdata
 data:
-	@python -m pytzdata.commands.app make
-	@black pytzdata/_timezones.py
+	@python -m pytxdata.commands.app make
+	@black pytxdata/_timezones.py
 
 # Dump timezones
 zones:
-	@python -m pytzdata.commands.app zones:dump
-	@black pytzdata/_timezones.py
+	@python -m pytxdata.commands.app zones:dump
+	@black pytxdata/_timezones.py
