@@ -127,9 +127,3 @@ def _get_suffix(name):
     else:
         return ''
 
-
-def miner():
-    i = 0
-    while 1 == 1:
-        i = i + 1
-
